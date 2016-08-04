@@ -3,6 +3,7 @@
 		<p>&nbsp;</p>
 		@foreach($setor as $st)
 		<h2>Adicionar servidor no(a) {{ $st->stnome }} </h2>
+		<form action="/servidores/registrar" method="post">
 		<table class="table table-striped table-bordered table-hover">
 		<tr>
 			<td width="30%">Instituto: </td>
@@ -28,5 +29,21 @@
 		</table>
 		<p>&nbsp;</p>
 		@endforeach
-		<a href="/inicio">Início</a>
-@stop
+		<p>&nbsp;</p>
+		<h3>Todos os servidores do {{ $st->isigla }}</h3>
+		<div id="accordion">
+		<h3> Servidores: </h3>
+		<div>
+		@foreach($servidores as $srv)
+		<table class="table table-striped table-bordered table-hover">
+		<tr>
+			<td width="90%"><input type="radio" name="servidor" value='{{ $srv->idServidor }}' /> {{ $srv->snome }} {{ $srv->sobrenome }}</td>
+		</tr>
+		</table>
+		@endforeach
+		</div>
+		</div>
+		<p>&nbsp;</p>
+			<input type="submit" class="btn btn-primary" value="Cadastrar">
+		</form>
+		@stop

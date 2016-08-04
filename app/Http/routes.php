@@ -14,10 +14,14 @@ Route::get('/', function(){
 });
 Route::get('/inicio','InstitutoController@inicio'); // Principal
 Route::get('/organograma','OrganogramaController@mapa'); // Principal
-Route::get('/setores/{id_in}/{id_un}','OrganogramaController@setor')->where('id_in','[0-9]+'); // Redirecionador
+// setores/1/2 Redirecionador para
+// /servidores/1/2/3
+// /setor/1/2/3
+Route::get('/setores/{id_in}/{id_un}','OrganogramaController@setor')->where('id_in','[0-9]+'); 
 // Para cadastrar novo servidor em um setor específico / campus
-Route::get('/setor/{id_in}/{id_un}/{id_st}','SetorController@cadastro');// Redirecionador
+Route::get('/setor/{id_in}/{id_un}/{id_st}','SetorController@cadastro');// Redirecionador /setor/1/2/3
 Route::post('/setor/adicionar','SetorController@adiciona'); // Principal
+Route::post('/setor/registrar','SetorController@registrar'); // Redirecionador adicionar para registrar
 // Seçõa específica para cadastro do setor
 Route::post('/setores/adicionar','ServidorController@adiciona'); // Principal
 // Fim da seção cadastro de setor

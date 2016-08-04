@@ -68,5 +68,4 @@
 			</div>
 			<button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
 			</form>
-		<a href="/">Início</a>
 @stop

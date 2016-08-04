@@ -44,6 +44,5 @@
 		</table>
 		<p>&nbsp;</p>
 		@endforeach
-		<a href="/">Início</a>
 		<!- Sobre os Glyphicons em http://glyphicons.bootstrapcheatsheets.com/ ->
 		@stop

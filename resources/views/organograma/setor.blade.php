@@ -2,7 +2,7 @@
 		@section('miolo')
 		<h1>Organograma por Lista de Setores</h1>
 		<p>&nbsp;</p>
-		<a href="/organograma">Voltar</a>
+		<a href="/organograma" class="btn btn-primary" role="button">Voltar</a>
 		@foreach($setor as $st)
 		<table class="table table-striped table-bordered table-hover">
 		<tr>
@@ -19,8 +19,5 @@
 			</tr>
 		</p>
 		</table>
-		<p>&nbsp;</p>
-		<br/>
 		@endforeach
-		<a href="/">Início</a>
 		@stop

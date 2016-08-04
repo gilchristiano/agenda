@@ -23,5 +23,4 @@
 		</table>
 		<p>&nbsp;</p>
 		@endforeach
-		<a href="/inicio">Início</a>
 @stop
