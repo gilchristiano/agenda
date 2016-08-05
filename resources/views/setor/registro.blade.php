@@ -1,9 +1,10 @@
 		@extends('layout.principal')
 		@section('miolo')
 		<p>&nbsp;</p>
+		<form action="/setor/servidor/adicionar" method="post">
+		<input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
 		@foreach($setor as $st)
 		<h2>Adicionar servidor no(a) {{ $st->stnome }} </h2>
-		<form action="/servidores/registrar" method="post">
 		<table class="table table-striped table-bordered table-hover">
 		<tr>
 			<td width="30%">Instituto: </td>
@@ -27,6 +28,9 @@
 		</tr>
 		</p>
 		</table>
+		<input type="hidden" name="idSetor" value="{{ $st->idSetor}}">
+		<input type="hidden" name="idunidade" value="{{ $st->idunidade}}">
+		<input type="hidden" name="idinstituto" value="{{ $st->idinstituto}}">
 		<p>&nbsp;</p>
 		@endforeach
 		<p>&nbsp;</p>
@@ -37,7 +41,7 @@
 		@foreach($servidores as $srv)
 		<table class="table table-striped table-bordered table-hover">
 		<tr>
-			<td width="90%"><input type="radio" name="servidor" value='{{ $srv->idServidor }}' /> {{ $srv->snome }} {{ $srv->sobrenome }}</td>
+			<td width="90%"><input type="radio" name="idservidor" value="{{ $srv->idServidor }}" /> {{ $srv->snome }} {{ $srv->sobrenome }}</td>
 		</tr>
 		</table>
 		@endforeach

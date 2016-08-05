@@ -9,7 +9,7 @@ use Request;
 | Sistema de Gestão de Eventos e Saídas para Capacitações
 | NGTI - Núcleo de Gestão da Tecnologia da Informação (2016)
 */
-class ServidorController extends Controller{
+	class ServidorController extends Controller{
 	public function cadastro(){
 		return view('servidor.cadastro');
 	}
@@ -27,9 +27,6 @@ class ServidorController extends Controller{
 	$chave = 0;
 	DB::insert('insert into servidor(snome,sobrenome,siape,lotacao,desc_lotacao,cargo,datanascimento,entrada,saida,observacoes,chave)values(?,?,?,?,?,?,?,?,?,?,?)',array($nome,$sobrenome,$siape,$lotacao,$desc_lotacao,$cargo, $datanascimento,$entrada,$saida,$observacoes,$chave));
 		return view('servidor.adicionado');
-	}
-	public function administra(){
-		return view('servidor.administra');
 	}
 }
 ?>

@@ -2,14 +2,14 @@
 use Illuminate\Support\Facades\DB;
 use Request;
 /*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
 | Instituto Federal de Educação, Ciência e Tecnologia Baiano - Campus Santa Inês
 | Sistema de Gestão de Eventos e Saídas para Capacitações
 | NGTI - Núcleo de Gestão da Tecnologia da Informação (2016)
 */
 class OrganogramaController extends Controller{
+	public function inicio(){
+		return view('inicio');
+	}
 	public function servidor($id_in,$id_un,$id_st){
 		$servidor = DB::select('select ss.idsetor, s.snome, s.sobrenome, s.siape, s.lotacao, s.desc_lotacao, i.inome, i.isigla, u.unidade, st.stnome, st.stsigla, ss.idservidor, ss.funcao from servidor s, instituto i, unidade u, setor st, servidor_setor ss where ss.idservidor = s.idServidor and ss.idsetor = st.idSetor and ss.idsetor = ? and st.unidade = u.idunidade and st.unidade = ? and u.instituto = i.idinstituto and u.instituto = ? ORDER BY s.lotacao, s.snome, s.sobrenome DESC',[$id_st,$id_un,$id_in]);
 			if(empty($servidor)){
