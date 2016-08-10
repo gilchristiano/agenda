@@ -11,17 +11,23 @@
 			</div>
 			<p>&nbsp;</p>
 			<div class="row" align="center">
-				<div class="col-md-3">
+				<div class="col-md-2">
 					<a href="/organograma" target="_self">
 					<button type="button" class="btn btn-primary">
 						Organograma
 					</button>
 					</a>
 				</div>
-				<div class="col-md-3">
-					 
+				<div class="col-md-2">
+					<a href="/servidores/cadastrar" target="_self">
 					<button type="button" class="btn btn-primary">
-						Controle de Registros de Eventos
+						Gestão de Servidores
+					</button>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<button type="button" class="btn btn-primary">
+						Controle de Eventos
 					</button>
 				</div>
 				<div class="col-md-3">
@@ -30,10 +36,10 @@
 						Controle de Saídas para Capacitação
 					</button>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-2">
 					 
 					<button type="button" class="btn btn-primary">
-						Registros de Relatórios
+						Relatórios
 					</button>
 				</div>
 			</div>
@@ -42,7 +48,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<address>
-						 <strong>IFBaiano</strong>
+						 <strong></strong>
 					</address>
 				</div>
 			</div>

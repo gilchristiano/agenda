@@ -2,7 +2,8 @@
 		@section('miolo')
 		<h1>Servidores por Setor</h1>
 		<p>&nbsp;</p>
-		<a href="/organograma">Voltar</a>
+		<a href="/organograma" class="btn btn-primary" role="button">Voltar</a>
+		<p>&nbsp;</p>
 		@foreach($servidor as $p)
 		<table class="table table-striped table-bordered table-hover">
 			<tr>

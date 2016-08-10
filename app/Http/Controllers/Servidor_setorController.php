@@ -11,8 +11,14 @@ use Request;
 	$idSetor = Request::input('idSetor');
 	$idunidade  = Request::input('idunidade');
 	$idservidor = Request::input('idservidor');
-	DB::insert('insert into servidor_setor(idservidor,idsetor,entrada,saida,funcao)values(?,?,?,?,?)',array($idservidor,$idSetor,'2015-10-10','0001-01-01','Não possui'));
+	$confirmar = DB::select('select s.snome, s.sobrenome, st.stnome from servidor_setor AS ss INNER JOIN  setor AS st ON ss.idservidor = ? and ss.idsetor = st.idSetor INNER JOIN servidor AS s ON ss.idservidor = s.idServidor',[$idservidor]);
+	if($confirmar != NULL){ // já se encontra cadastrado
+		return view('servidor_setor.alerta')->withConfirmar($confirmar);
+	}
+	else {
+	DB::table('servidor_setor')->insert(['idservidor'=>$idservidor,'idsetor'=>$idSetor,'entrada'=>'2015-10-10','saida'=>'0001-01-01','funcao'=>'Não possui']);
 	return view('servidor_setor.adicionado');
+		}
 	}
 }
 ?>
