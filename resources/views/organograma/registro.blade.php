@@ -1,6 +1,6 @@
 		@extends('layout.principal')
 		@section('miolo')
-		<h1>Servidores Lotados em cada Setor</h1>
+		<h1>Servidores por Setor</h1>
 		<p>&nbsp;</p>
 		<a href="/organograma">Voltar</a>
 		@foreach($servidor as $p)

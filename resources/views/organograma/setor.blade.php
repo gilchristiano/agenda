@@ -20,4 +20,5 @@
 		</p>
 		</table>
 		@endforeach
+		<h3>{{ $st->inome }} </h3>
 		@stop

@@ -13,7 +13,7 @@ class OrganogramaController extends Controller{
 	public function servidor($id_in,$id_un,$id_st){
 		$servidor = DB::select('select ss.idsetor, s.snome, s.sobrenome, s.siape, s.lotacao, s.desc_lotacao, i.inome, i.isigla, u.unidade, st.stnome, st.stsigla, ss.idservidor, ss.funcao from servidor s, instituto i, unidade u, setor st, servidor_setor ss where ss.idservidor = s.idServidor and ss.idsetor = st.idSetor and ss.idsetor = ? and st.unidade = u.idunidade and st.unidade = ? and u.instituto = i.idinstituto and u.instituto = ? ORDER BY s.lotacao, s.snome, s.sobrenome DESC',[$id_st,$id_un,$id_in]);
 			if(empty($servidor)){
-				return view('error');
+				return view('organograma.error');
 			}
 			else {
 				if(view()->exists('organograma.registro')) {
@@ -22,7 +22,7 @@ class OrganogramaController extends Controller{
 			}
 	}
 	public function mapa(){
-		$id = 1;
+		$id = 1; // IFBaiano
 		$mapa = DB::select('SELECT i.idinstituto, i.inome, i.isigla, u.unidade, u.idunidade FROM instituto i, unidade u WHERE i.idinstituto = ? and i.idinstituto = u.instituto ORDER BY u.idunidade ASC',[$id]);
 		if(view()->exists('organograma.mapa')) {
 		return view('organograma.mapa')->withMapa($mapa);

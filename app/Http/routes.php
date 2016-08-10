@@ -12,7 +12,7 @@ Route::get('/', function(){
 });
 Route::get('/inicio','OrganogramaController@inicio'); // Principal - inicio
 Route::get('/organograma','OrganogramaController@mapa'); // Principal - organograma.mapa
-Route::get('/setores/{id_in}/{id_un}','OrganogramaController@setor')->where('id_in','[0-9]+'); // Redirec - organograma.setor
+Route::get('//setores/{id_in}/{id_un}','OrganogramaController@setor')->where('id_in','[0-9]+'); // Redirec - organograma.setor
 Route::get('/setor/{id_in}/{id_un}/{id_st}','SetorController@cadastro');// Redirecionador /setor/1/2/3
 Route::post('/setor/adicionar','SetorController@adiciona'); // Principal
 Route::post('/setor/registrar','SetorController@registrar'); // Redirecionador adicionar para registrar
