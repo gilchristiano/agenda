@@ -2,50 +2,39 @@
 		@section('miolo')
 <div class="container-fluid">
 		&nbsp;
-		<h2>Módulos de Gestão</h2>
+		<h2>Módulo Gestão de Servidores</h2>
 	<div class="row">
 		<div class="col-md-12">
 			<div class="list-group">
-				 <a href="#" class="list-group-item active">Introdução</a>
+				 <a href="#" class="list-group-item active">Ambiente de Gestão de Informações</a>
 				<div class="list-group-item">
-					Módulos
+					Funcionalidades
 				</div>
 				<div class="list-group-item">
 					<p class="list-group-item-text">
-					<a href="/organograma" target="_self">
 					<button type="button" class="btn btn-primary">
-						Organograma
+						Visualizar
 					</button>
+					<button type="button" class="btn btn-primary">
+						Alterar
+					</button>
+					<a href="/servidores/cadastrar" target="_self" title="Cadastrar servidor">
+						<button type="button" class="btn btn-primary">
+						Cadastrar
+						</button>
 					</a>
-					<a href="/servidores/iniciar" target="_self">
 					<button type="button" class="btn btn-primary">
-						Servidores
-					</button>
-					</a>
-					<button type="button" class="btn btn-primary">
-						Eventos
-					</button>
-					<button type="button" class="btn btn-primary">
-						Capacitações
+						Excluir
 					</button>
 					</p>
 				</div>
 				<div class="list-group-item">
 				</div> <a class="list-group-item active"><span class="badge">04 itens</span>Itens</a>
 			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<button type="button" class="btn btn-default">
-						Administrar módulos
-					</button>
-				</div>
-				<div class="col-md-3">
-				</div>
-				<div class="col-md-3">
-				</div>
-				<div class="col-md-3">
-				</div>
-			</div>
+			<a href="/inicio" class="btn btn-primary" role="button">Voltar</a>
+			<button type="button" class="btn btn-default">
+				Administrar seção
+			</button>
 		</div>
 	</div>
 </div>

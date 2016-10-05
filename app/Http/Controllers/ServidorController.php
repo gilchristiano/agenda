@@ -10,6 +10,9 @@ use Request;
 | NGTI - Núcleo de Gestão da Tecnologia da Informação (2016)
 */
 	class ServidorController extends Controller{
+	public function inicio(){
+		return view('servidor.inicio');
+	}
 	public function cadastro(){
 		
 		$instituto = DB::select('select i.idinstituto, i.inome, i.inome, u.idunidade, u.unidade from instituto i, unidade u where i.idinstituto = u.instituto ORDER BY i.inome');
@@ -27,7 +30,7 @@ use Request;
 	$saida = Request::input('saida');
 	$observacoes = Request::input('observacoes');
 	$chave = 0;
-	DB::insert('insert into servidor(snome,sobrenome,siape,lotacao,desc_lotacao,cargo,datanascimento,entrada,saida,observacoes,chave)values(?,?,?,?,?,?,?,?,?,?,?)',array($nome,$sobrenome,$siape,$lotacao,$desc_lotacao,$cargo, $datanascimento,$entrada,$saida,$observacoes,$chave));
+	DB::insert('insert into servidor(snome,sobrenome,siape,lotacao,desc_lotacao,cargo,datanascimento,entrada,saida,observacoes,chave)values(?,?,?,?,?,?,?,?,?,?,?)',array($nome,$sobrenome,$siape,$lotacao,$desc_lotacao,$cargo,$datanascimento,$entrada,$saida,$observacoes,$chave));
 		return view('servidor.adicionado');
 	}
 }

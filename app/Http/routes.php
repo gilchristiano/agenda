@@ -22,6 +22,7 @@ Route::post('/setores/adicionar','ServidorController@adiciona'); // Principal
 // Fim da seção cadastro de setor
 Route::get('/servidores/{id_in}/{id_un}/{id_st}','OrganogramaController@servidor')->where('id_in','[0-9]+');// Redirecionador
 // Seçõa específica para cadastro do servidor
-Route::get('/servidores/cadastrar','ServidorController@cadastro'); // Principal
+Route::get('/servidores/iniciar','ServidorController@inicio'); // Principal
+Route::get('/servidores/cadastrar','ServidorController@cadastro'); // Cadastrar
 Route::post('/servidores/adicionar','ServidorController@adiciona');// Redirecionador
 

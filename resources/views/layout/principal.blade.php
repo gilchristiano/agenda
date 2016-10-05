@@ -28,13 +28,11 @@
 		<nav class="navbar navbar-default">
 		<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="navbar-brand href="/organograma">
-			Sistema de Controle de Eventos e Saídas para Capacitações
-			</a>
+			<a class="navbar-brand" href="/organograma">Gestão de Eventos e Capacitações</a>
 		</div>
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="/organograma">Listagem</a></li>
-			<li><a href="/inicio">Início</a></li>
+			<li><a href="/inicio" class="btn btn-primary" role="button">início</a></li>
+			<li><a href="/inicio" class="btn btn-primary" role="button">Fechar</a></li>
 		</ul>
 		</div>
 		</nav>
