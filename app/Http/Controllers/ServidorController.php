@@ -11,7 +11,9 @@ use Request;
 */
 	class ServidorController extends Controller{
 	public function cadastro(){
-		return view('servidor.cadastro');
+		
+		$instituto = DB::select('select i.idinstituto, i.inome, i.inome, u.idunidade, u.unidade from instituto i, unidade u where i.idinstituto = u.instituto ORDER BY i.inome');
+		return view('servidor.cadastro')->withInstituto($instituto);
 	}
 	public function adiciona(){
 	$nome = Request::input('nome');

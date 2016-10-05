@@ -18,6 +18,17 @@
 			<label>SIAPE</label>
 			<input name="siape" type="number" class="form-control">
 			</div>
+			<!-- Fim da descrição da lotação -->
+			<div class="form-group">
+			<label>Instituto vinculado</label>
+			<br/>
+			<select class="selectpicker" data-style="btn-primary">
+			@foreach($instituto as $ins)
+			<option name="{{ $ins->idunidade }}">{{ $ins->inome }} </option>
+			@endforeach
+			</select>
+			</div>
+			&nbsp;
 			<!-- Lotação TAE ou EBTT -->
 			<div class="input-group">
 				<span class="input-group-addon beautiful">
