@@ -2,6 +2,7 @@
 		@section('miolo')
 		<div class="container-fluid">
 		&nbsp;
+		<h2>Módulo Organograma</h2>
 	<div class="row">
 		<div class="col-md-12">
 			<div class="list-group">
@@ -45,8 +46,4 @@
 		</div>
 	</div>
 </div>
-		
-		
-		
-		
 @stop

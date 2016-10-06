@@ -16,13 +16,11 @@
 	$( "#accordion" ).accordion({collapsible: true,  active: false });
 	} );
 	</script>
-</head>
-<body>
 	<!-- IFBaiano Campus Santa Inês -->
 	<!-- NGTI - Núcleo de Gestão da Tecnologia da Informação -->
 	<!-- Governo Federal - Poder Executivo (2016) -->
 </head>
-	<body>
+	<body unload="ConfirmExit()">
 	<p>&nbsp;</p>
 		<div class="container">
 		<nav class="navbar navbar-default">
