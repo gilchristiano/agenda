@@ -25,4 +25,8 @@ Route::get('/servidores/{id_in}/{id_un}/{id_st}','OrganogramaController@servidor
 Route::get('/servidores/iniciar','ServidorController@inicio'); // Principal
 Route::get('/servidores/cadastrar','ServidorController@cadastro'); // Cadastrar
 Route::post('/servidores/adicionar','ServidorController@adiciona');// Redirecionador
+//Seção de Registros e Acompanhamento Capacitação
+Route::get('/capacitacao/relatorio','CapacitacaoController@relatorio')->where('siape','[0-9]+');
+Route::post('/capacitacao/registro','CapacitacaoController@registro');
+
 

@@ -25,9 +25,14 @@
 					<button type="button" class="btn btn-primary">
 						Eventos
 					</button>
+					<a href="/capacitacao/relatorio" target="_self">
 					<button type="button" class="btn btn-primary">
-						Capacitações
+						Capacitação
 					</button>
+					</a>
+					
+					
+					
 					</p>
 				</div>
 				<div class="list-group-item">

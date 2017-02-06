@@ -37,7 +37,7 @@
 	@yield('miolo')
 	<footer class="footer">
 	<p>
-		<span class="glyphicon glyphicon-cloud"> IFBaiano (2016)</span>
+		<span class="glyphicon glyphicon-cloud"> IFBaiano (2017)</span>
 	</p>
 	</footer>
 		</div>
